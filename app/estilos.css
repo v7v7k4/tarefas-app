@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.cabecalho{
+	background: #3b89da;
+}
+
+body{
+	background: #e8e8e8;
+}
+
+.cartao{
+	background: #EBEF40;
+	margin: 16px;
+	padding: 16px;
+	box-sizing:border-box;
+	text-align: left;
+	/*Informar ao browser que ele pode aumentar o width do cartão, caso necessário*/
+	flex-basis:190px;
+	flex-grow:1;
+}
+
+.container{
+	padding: 0 10%;
+}
+
+.mural{
+	text-align: center;
+	/*Para manter um espaçamento uniforme entre os cartões*/
+	display: flex;
+	/*Informar para o container que os cartões podem ir para outra linha*/
+	flex-wrap: wrap;
+
+}
+
+.mural--linhas{
+	flex-direction:column;
+}
+
+.mural--linhas .cartao{
+	flex-basis: auto;
+	width: auto;
+	display: block;
+}
+
+.cartao--some{
+	opacity: 0;
+	transition:0.2s ease-in;
+}
+
+#mudaLayout{
+	display: none;
+}
+
+@media (min-width: 560px){
+	.cartao{
+		width: 190px;
+		display: inline-block;
+	}
+	#mudaLayout{
+		display: inline-block;
+	}
+}
